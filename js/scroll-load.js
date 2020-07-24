@@ -52,7 +52,8 @@
             this.addScrollEvent();
 
             if (this.autoLoad) {
-                this.callback(++this.page, this);
+                this.callback(this.page, this);
+                this.page++
             }
         }
 
