@@ -6,25 +6,25 @@
 # 使用
 ```js
 let s = new scrollLoad({
-		scrollArea: '.drop',
-		loadOffset: 10,
-		initPage: 1,
-		autoLoad: true,
-		loadFun: function (nextPage, scroll) {
-		    ajax({
-		        url:'www.baidu.com',
-                type:'get',
-                dataType:'json',
-                success: function(data) {
+	scrollArea: '.drop',
+	loadOffset: 10,
+	initPage: 1,
+	autoLoad: true,
+	loadFun: function (nextPage, scroll) {
+		ajax({
+		       	url:'www.baidu.com',
+              		type:'get',
+                	dataType:'json',
+                	success: function(data) {
 		              if(data.length == 10){
 		                  scroll.ready();
 		              }
-                },
-                error: function() {
+                	},
+                	error: function() {
 		           
-                }
-		    })
-		}
+                	}
+		})
+	}
 });
 	
 ```
